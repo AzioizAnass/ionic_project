@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <div class="row">
+      
+        <!--<ion-title>Cours Description</ion-title>-->
+      
+      <div class="col-md-6 d-flex justify-content-end my-2">
+      <button class="btn btn-danger btn-sm mx-1" (click)="deconnecter()">Se Deconnecter</button>
+    </div>
+    </div>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="text-center">
+<ion-text color="success">
+  <h1 >Formation : {{titre}} </h1>
+</ion-text>
+  <p color="info">{{dateDeb}}||{{dateFin}}</p>
+
+<img src={{image}} width="500px"/>
+<ion-text color="medium">
+  <p>Prérequis : {{prerequis}}</p>
+</ion-text>
+<ion-text color="medium">
+  <p>Description : {{description}} </p>
+</ion-text>
+<ion-text color="medium">
+  <p>Prix :{{prix}} </p>
+</ion-text>
+
+
+</ion-content>

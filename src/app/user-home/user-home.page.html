@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar >
+    <div class="row">
+    <div class="col-md-6">
+      <ion-title>Home</ion-title>
+    </div>
+    <div class="col-md-6 d-flex justify-content-end my-2">
+    <button class="btn btn-danger btn-sm mx-1" (click)="deconnecter()">Se Deconnecter</button>
+  </div>
+  </div>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content class="text-center">
+  
+  <ion-text color="medium">
+    <h1>Bonjour {{name}} </h1>
+  </ion-text>
+  <ion-text color="success">
+    <h5>Mes cours : </h5>
+    <div class="mx-2">
+    <div class="row">
+      <div class="col-md-3" *ngFor="let course of myCourses">
+        <ion-card class="container">
+          <ion-card-header>
+            <ion-card-subtitle>Formation sur : </ion-card-subtitle>
+            <ion-card-title>{{course}}</ion-card-title>
+          </ion-card-header>
+        
+          
+          <button (click)="consulter(course)" class="btn btn-danger btn-block my-2 mx-1">Plus de détailles</button>
+        </ion-card>
+      </div>
+    </div>
+</div>
+
+  </ion-text>
+  <ion-text color="warning">
+    <h5>Réserver un cours : </h5>
+    <div class="mx-2 ">
+    <div class="row">
+      <div class="col-md-3" *ngFor="let course of courses">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-subtitle>Formation : </ion-card-subtitle>
+            <ion-card-title>{{course}}</ion-card-title>
+          </ion-card-header>
+        
+            <div class="text-center"><button (click)="ajouterCours(course)" class="btn btn-info btn-block my-2 mx-1">Réserver le cours</button></div>
+            <div class="text-center"><button (click)="consulter(course)" class="btn btn-danger btn-block my-2 mx-1">Plus de détailles</button></div>
+          
+          
+          
+        </ion-card>
+      </div>
+    </div>
+  </div>
+  </ion-text>
+</ion-content>
